@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+}
+
+.body {
+    background: aliceblue;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+#LeftPanel {
+    background: darkgreen;
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+#RightPanel {
+    background-color: aquamarine;
+    width: 50%;
+    height: 100%;
+    float: right;
+}
+
+#TwoChoicePanel {
+    background: chartreuse;
+    height: 50%;
+}
+
+#MutiChoicePanel {
+    background: cornflowerblue;
+    height: 50%;
+}
+
+.choicePanel {
+    height: 100%;
+    float: left;
+    text-align: center;
+}
+
+.choicePanel.twoRows {
+    width: 50%;
+    background: #0065a5;
+}
+
+.choicePanel.twoRows:hover {
+    background: darkcyan;
+}
+
+.choicePanel.fourRows {
+    width: 25%;
+    background: brown;
+}
+
+.choicePanel.fourRows:hover {
+    background: burlywood;
+}
+
+.twoOptionFirst {
+    /*background: darkgreen;*/
+    height: 50%;
+}
+
+.twoOptionLast {
+    /*background: darkcyan;*/
+    height: 50%;
+}
+
+.twoOptionSpan{
+    line-height: 100px;
+    font-family: "Segoe UI Light";
+    font-size: 30px;
+    color: white;
+}
+
+#rpHeader{
+    background: burlywood;
+    height: 50px;
+}
+
+#rpHeader .title{
+    width: 50%;
+    background: darkmagenta;
+    text-align: center;
+    float: left;
+}
+
+#rpHeader .title span{
+    line-height: 50px;
+    font-family: "Segoe UI Light";
+    font-size: 30px;
+    color: white;
+}
+
+#rpHeader .slogan{
+    width: 50%;
+    background: blue;
+    text-align: center;
+    float: left;
+}
+
+#rpHeader .slogan span{
+    line-height: 50px;
+    font-family: "Segoe UI Light";
+    font-size: 20px;
+    color: white;
+}
