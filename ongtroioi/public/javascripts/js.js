@@ -1,6 +1,6 @@
-$(document).ready(function () {
+ï»¿$(document).ready(function () {
 
-    var chooseOption = 1 //Có-Không
+    var chooseOption = 1 //CÃ³-KhÃ´ng
 
     $('#boxResult').click(function () {
         $('#imgResult').hide();
@@ -18,9 +18,9 @@ $(document).ready(function () {
     function getTextResult(randomResult) {
         if (chooseOption == 1) {
             if (randomResult == 1) {
-                return "CÓ";
+                return "CÃ“";
             } else {
-                return "KHÔNG";
+                return "KHÃ”NG";
             }
         }
     }
