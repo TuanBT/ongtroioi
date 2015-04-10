@@ -1,3 +1,20 @@
+#about{
+    position: fixed;
+    height: 20px;
+    background: black;
+    padding: 10px;
+    width: 100%;
+    color: white;
+    font-family: "Segoe UI Light";
+    bottom: 0px;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+#about:hover{
+    opacity: 1;
+}
+
 body {
     margin: 0;
 }
@@ -17,7 +34,7 @@ body {
 }
 
 #RightPanel {
-    background-color: aquamarine;
+    background-color: rgb(165, 42, 135);
     width: 50%;
     height: 100%;
     float: right;
@@ -67,41 +84,73 @@ body {
     height: 50%;
 }
 
-.twoOptionSpan{
+.twoOptionSpan {
     line-height: 100px;
     font-family: "Segoe UI Light";
     font-size: 30px;
     color: white;
 }
 
-#rpHeader{
+#rpHeader {
     background: burlywood;
     height: 50px;
 }
 
-#rpHeader .title{
+#rpHeader .title {
     width: 50%;
     background: darkmagenta;
     text-align: center;
     float: left;
 }
 
-#rpHeader .title span{
+#rpHeader .title span {
     line-height: 50px;
     font-family: "Segoe UI Light";
     font-size: 30px;
     color: white;
 }
 
-#rpHeader .slogan{
+#rpHeader .slogan {
     width: 50%;
     background: blue;
     text-align: center;
     float: left;
 }
 
-#rpHeader .slogan span{
+#rpHeader .slogan span {
     line-height: 50px;
+    font-family: "Segoe UI Light";
+    font-size: 20px;
+    color: white;
+}
+
+#helpText {
+    text-align: center;
+    margin: 20px auto 0 0;
+    /*background: coral;*/
+    font-family: "Segoe UI Light";
+    font-size: 20px;
+    color: white;
+}
+
+#boxResult{
+    width: 30%;
+    height: 30%;
+    margin: 0 auto;
+    background-color: #b0e0e6;
+    cursor: pointer;
+}
+
+#answer{
+    text-align: center;
+    font-family: "Segoe UI Light";
+    font-size: 30px;
+    color: white;
+}
+
+#funnyText{
+    margin: 20px;
+    text-align: center;
     font-family: "Segoe UI Light";
     font-size: 20px;
     color: white;

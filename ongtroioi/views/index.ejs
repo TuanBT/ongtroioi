@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset="UTF-8">
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <script type="text/javascript" src="/javascripts/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/javascripts/js.js" ></script>
 </head>
 <body>
 <!--    <h1><%= title %></h1>
@@ -13,15 +16,17 @@
             <div class="choicePanel fourRows">
                 <div class="twoOptionFirst">
                     <span class="twoOptionSpan">CÓ</span>
+
                     <div></div>
                 </div>
                 <div class="twoOptionLast">
-                      <span class="twoOptionSpan">KHÔNG</span>
+                    <span class="twoOptionSpan">KHÔNG</span>
                 </div>
             </div>
             <div class="choicePanel fourRows">
                 <div class="twoOptionFirst">
                     <span class="twoOptionSpan">ĐÚNG</span>
+
                     <div></div>
                 </div>
                 <div class="twoOptionLast">
@@ -31,6 +36,7 @@
             <div class="choicePanel fourRows">
                 <div class="twoOptionFirst">
                     <span class="twoOptionSpan">YÊU</span>
+
                     <div></div>
                 </div>
                 <div class="twoOptionLast">
@@ -40,6 +46,7 @@
             <div class="choicePanel fourRows">
                 <div class="twoOptionFirst">
                     <span class="twoOptionSpan">-</span>
+
                     <div></div>
                 </div>
                 <div class="twoOptionLast">
@@ -57,14 +64,32 @@
         </div>
     </div>
     <div id="RightPanel">
-<div id="rpHeader">
-<div class="title">
-    <span><b>Ô</b>ng <b>T</b>rời <b>Ơ</b>i!!!</span>
-</div>
-    <div class="slogan">
-        <span>Muốn biết sự đời, hãy hỏi ông trời</span>
+        <div id="rpHeader">
+            <div class="title">
+                <span><b>Ô</b>ng <b>T</b>rời <b>Ơ</b>i!!!</span>
+            </div>
+            <div class="slogan">
+                <span>Muốn biết sự đời, hãy hỏi ông trời</span>
+            </div>
+        </div>
+        <div id="helpText">
+            <span>Con chọn câu trả lời <span>CÓ</span> hay <span>KHÔNG</span>.</br>Con hãy nói ba lần "ÔNG TRỜI ƠI, HÃY GIÚP CON".</br>
+                Ta sẽ nghe thấy và cho con lời khuyên thông thái nhất.</span>
+        </div>
+        <div id="boxResult">
+            <img id="imgResult" src="/images/ViewBox.svg" width="100%" height="100%"/>
+            <img id="imgRunning" src="/images/dancing-banana.gif" width="100%" height="100%" style="display: none"/>
+        </div>
+        <div id="answer">
+            -
+        </div>
+        <div id="funnyText">
+            Ta nói là CÓ con hãy làm theo đi. Nếu con muốn ấn nữa thì cứ việc, nhưng ta chỉ trả lời thật cho một câu hỏi
+            thôi.
+        </div>
     </div>
-</div>
+    <div id="about">
+        <span>Bùi Tiến Tuân - 4T</span>
     </div>
 </div>
 </body>
