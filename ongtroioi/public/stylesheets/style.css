@@ -34,7 +34,7 @@ body {
 }
 
 #RightPanel {
-    background-color: rgb(165, 42, 135);
+    background-color: dimgrey;
     width: 50%;
     height: 100%;
     float: right;
@@ -133,14 +133,6 @@ body {
     color: white;
 }
 
-#boxResult{
-    width: 30%;
-    height: 30%;
-    margin: 0 auto;
-    background-color: #b0e0e6;
-    cursor: pointer;
-}
-
 #answer{
     text-align: center;
     font-family: "Segoe UI Light";
@@ -154,4 +146,24 @@ body {
     font-family: "Segoe UI Light";
     font-size: 20px;
     color: white;
+}
+
+#boxResult{
+    font-family: "Segoe UI Light";
+    color: white;
+    font-size: 70px;
+    font-weight: 300;
+    line-height: 80px;
+    margin: 0 auto;
+    cursor: pointer;
+    width: 300px;
+    height: 80px;
+    border: solid 1px white;
+    text-align: center;
+    padding: 5px;
+}
+
+#boxClick{
+    cursor: pointer;
+    margin: 20px;
 }

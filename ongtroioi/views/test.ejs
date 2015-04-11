@@ -1,10 +1,37 @@
+
+<!DOCTYPE html>
 <html>
 <head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
     <script type="text/javascript" src="/javascripts/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.slotmachine.js"></script>
 </head>
 <body>
 <canvas id="coinAnimation"></canvas>
-<script src="/javascripts/coin.js"></script>
+<div id="changeTextBox" style="height: 100px;width: 100px"></div>
+<!--<script src="/javascripts/coin.js"></script>-->
+<!--<script src="/javascripts/change.js"></script>-->
 <div style="width: 100px;height: 100px;background: blue" id="buttonRandom"></div>
+<div id="textMachine">
+    <div>CÓ</div>
+    <div>KHÔNG</div>
+</div>
+<script>
+    $(document).ready(function () {
+        function onComplete() {
+            $("#changeTextBox").text("Index: " + this.active);
+        }
+
+        $("#buttonRandom").click(function () {
+            $("#textMachine").slotMachine({delay: 450})
+                    .shuffle(10, onComplete);
+        });
+    });
+</script>
+<style>
+    #textMachine {
+
+    }
+</style>
 </body>
 </html>

@@ -5,6 +5,7 @@
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css'/>
     <script type="text/javascript" src="/javascripts/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.slotmachine.js"></script>
     <script type="text/javascript" src="/javascripts/js.js" ></script>
 </head>
 <body>
@@ -13,46 +14,39 @@
 <div class="body">
     <div id="LeftPanel">
         <div id="TwoChoicePanel">
-            <div class="choicePanel fourRows">
+            <div id="T1" onclick="optClick('T1')" class="choicePanel fourRows">
                 <div class="twoOptionFirst">
                     <span class="twoOptionSpan">CÓ</span>
-
-                    <div></div>
                 </div>
                 <div class="twoOptionLast">
                     <span class="twoOptionSpan">KHÔNG</span>
                 </div>
             </div>
-            <div class="choicePanel fourRows">
+            <div id="T2" onclick="optClick('T2')" class="choicePanel fourRows">
                 <div class="twoOptionFirst">
                     <span class="twoOptionSpan">ĐÚNG</span>
-
-                    <div></div>
                 </div>
                 <div class="twoOptionLast">
                     <span class="twoOptionSpan">SAI</span>
                 </div>
             </div>
-            <div class="choicePanel fourRows">
+            <div id="T3" onclick="optClick('T3')" class="choicePanel fourRows">
                 <div class="twoOptionFirst">
                     <span class="twoOptionSpan">YÊU</span>
-
-                    <div></div>
                 </div>
                 <div class="twoOptionLast">
                     <span class="twoOptionSpan">KHÔNG YÊU</span>
                 </div>
             </div>
-            <div class="choicePanel fourRows">
+            <div id="T4" onclick="optClick('T4')" class="choicePanel fourRows">
                 <div class="twoOptionFirst">
                     <span class="twoOptionSpan">-</span>
-
-                    <div></div>
                 </div>
                 <div class="twoOptionLast">
                     <span class="twoOptionSpan">+</span>
                 </div>
             </div>
+
         </div>
         <div id="MutiChoicePanel">
             <div class="choicePanel twoRows">
@@ -73,18 +67,18 @@
             </div>
         </div>
         <div id="helpText">
-            <span>Con chọn câu trả lời <span>CÓ</span> hay <span>KHÔNG</span>.</br>Con hãy nói ba lần "ÔNG TRỜI ƠI, HÃY GIÚP CON".</br>
+            <span>Con hãy nói ba lần "ÔNG TRỜI ƠI, HÃY GIÚP CON".</br>
                 Ta sẽ nghe thấy và cho con lời khuyên thông thái nhất.</span>
         </div>
-        <div id="boxResult">
-            <img id="imgResult" src="/images/ViewBox.svg" width="100%" height="100%"/>
-            <img id="imgRunning" src="/images/dancing-banana.gif" width="100%" height="100%" style="display: none"/>
+        <div id="boxClick">
+            <div id="boxResult">
+            </div>
         </div>
         <div id="answer">
             -
         </div>
-        <div id="funnyText">
-            Ta nói là CÓ con hãy làm theo đi. Nếu con muốn ấn nữa thì cứ việc, nhưng ta chỉ trả lời thật cho một câu hỏi
+        <div id="funnyText" style="display: none">
+            Đó là câu trả lời của ta. Nếu con muốn ấn nữa thì cứ việc, nhưng ta chỉ trả lời thật cho một câu hỏi
             thôi.
         </div>
     </div>
