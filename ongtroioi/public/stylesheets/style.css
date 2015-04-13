@@ -1,10 +1,12 @@
 #about{
     position: fixed;
     height: 20px;
+    line-height: 20px;
     background: black;
     padding: 10px;
     width: 100%;
-    color: white;
+    text-align: center;
+    color: #ecf0f1;
     font-family: "Segoe UI Light";
     bottom: 0px;
     opacity: 0;
@@ -13,6 +15,9 @@
 
 #about:hover{
     opacity: 1;
+}
+
+#about span{
 }
 
 body {
@@ -109,15 +114,30 @@ body {
 }
 
 #rpHeader .title {
-    width: 50%;
+    width: 100%;
     /*background: darkmagenta;*/
     text-align: center;
     float: left;
+
+
+}
+
+#rpHeader .title .st{
+    /*display: none;*/
+    /*margin-top: 20px;*/
+    font-size: 5px;
+    transition: all 0.3s ease-in;
+}
+
+#rpHeader .title:hover .st{
+    /*display: none;*/
+    /*margin-top: 20px;*/
+    font-size: inherit;
 }
 
 #rpHeader .title span {
     line-height: 50px;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 #rpHeader .slogan {
@@ -134,10 +154,22 @@ body {
 
 #helpText {
     text-align: center;
-    margin: 20px auto 0 0;
+    /*margin: 20px auto 0 0;*/
     /*background: coral;*/
     font-size: 20px;
-    height: 10%;
+    height: 20%;
+}
+
+#helpText span{
+
+}
+
+#helpText:hover .callSentence {
+    transition: all 0.3s ease-in;
+}
+
+#helpText:hover .callSentence {
+font-weight: bold;
 }
 
 #answer{
@@ -190,7 +222,7 @@ body {
 
 #buttonOption{
     height: 10%;
-    margin-top: 20px;
+    /*margin-top: 20px;*/
 }
 
 .buttonContain{
@@ -209,17 +241,20 @@ body {
     border: 1px dashed #c1c2c3;
     border-radius: 3px;
     /*padding: 0 30px 4px 15px;*/
-    -webkit-transition: all .2s ease;
-    transition: all .2s ease;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
 }
 
 .btnChoose:hover{
     border-color: #fff;
     color: #fff;
+    border: 1px solid #c1c2c3;
 }
 
 .btnChoose.current{
-    border: 1px solid #c1c2c3;
+    border: 1px solid #2c3e50;
+    background: #ecf0f1;
+    color: #2c3e50;
 
 }
 

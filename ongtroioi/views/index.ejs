@@ -13,24 +13,17 @@
     <p>Welcome to <%= title %></p>-->
 <div class="body">
     <div id="LeftPanel">
-        <div id="rpHeader">
-            <div class="title">
-                <span><b>Ô</b>ng <b>T</b>rời <b>Ơ</b>i!!!</span>
-            </div>
-            <div class="slogan">
-                <span>Muốn biết sự đời, hãy hỏi ông trời</span>
-            </div>
-        </div>
+
         <div id="helpText">
-            <span>Con hãy nói ba lần "ÔNG TRỜI ƠI, HÃY GIÚP CON".</br>
-                Ta sẽ nghe thấy và cho con lời khuyên thông thái nhất.</span>
+            </br>
+            <span>Con hãy nói ba lần <span class="callSentence">"ÔNG TRỜI ƠI, HÃY GIÚP CON"</span>.</br>
+                    Ta sẽ nghe thấy và cho con lời khuyên thông thái nhất.</span>
         </div>
         <div id="boxClick">
             <div id="boxResult">
             </div>
         </div>
         <div id="answer">
-            -
         </div>
         <div id="buttonOption">
             <div class="buttonContain">
@@ -52,17 +45,50 @@
             </div>
             <div class="buttonContain">
                 <div id="T4" onclick="optClick('T4')" class="btnChoose">
+                    NÊN-K.NÊN
+                </div>
+            </div>
+        </div>
+        <div id="buttonOption">
+            <div class="buttonContain">
+                <div id="T5" onclick="optClick('T3')" class="btnChoose">
+                    ...-...
+                </div>
+            </div>
+            <div class="buttonContain">
+                <div id="T6" onclick="optClick('T4')" class="btnChoose">
                     ...-...
                 </div>
             </div>
         </div>
     </div>
     <div id="RightPanel">
-        <div id="container" class="container" style="margin-left: -120px" >
+        <div id="rpHeader">
+            <!--KHÔNG CÂU TRẢ LỜI, XIN ĐỪNG TỰ BƠI!!!-->
+            <!--MUỐN BIẾT SỰ ĐỜI, GỌI ÔNG TRỜI ƠI!!!-->
+            <div class="title">
+                <span>
+                    <span class="st">KH</span>ÔNG
+                    <span class="st">CÂU</span>
+                    TR<span class="st">Ả L</span>ỜI
+                    <span class="st">, XIN ĐỪNG TỰ B</span>ƠI!!!
+                </span>
+                </br>
+                <span>
+                     <span class="st">MUỐN BIẾT SỰ ĐỜI, GỌI </span>ÔNG TRỜI ƠI!!!
+                </span>
+            </div>
+            <!--<div class="slogan">
+                <span>Muốn biết sự đời, hãy hỏi ông trời</span>
+            </div>-->
+        </div>
+        <div id="container" class="container" style="margin-left: -120px">
             <ul id="scene" class="scene">
                 <li id="pl1" class="layer" data-depth="0.30"><img src="images/sun.svg"></li>
-                <li id="pl2" class="layer" data-depth="1.00"><img src="images/cloud.svg"></li>
-                <li id="pl3" class="layer" data-depth="2.00"><img src="images/cloud2.svg"></li>
+                <li id="pl2" class="layer" data-depth="1.00"><img src="images/cloud.svg" height="200px"></li>
+                <li id="pl3" class="layer" data-depth="2.00">
+                    <div><img src="images/cloud.svg" height="300px"></div>
+                </li>
             </ul>
         </div>
         <script src="/javascripts/parallax.min.js"></script>

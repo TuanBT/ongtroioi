@@ -24,7 +24,8 @@ function optClick(id) {
     options = document.getElementById(id).innerText.trim().split('-');
     idChoose = id;
     var lh = $('#boxClick').height()+12;
-    $('#boxClick').html("<div id='boxResult' style='line-height:"+lh+"px'>" + options[0] + "-" + options[1] + "</div>");
+    //$('#boxClick').html("<div id='boxResult' style='line-height:"+lh+"px'>" + options[0] + "-" + options[1] + "</div>");
+    $('#boxClick').html("<div id='boxResult' style='line-height:"+lh+"px'>HỎI</div>");
     $(document).ready(function () {
         $('.btnChoose').attr('class', 'btnChoose');
         $('#' + idChoose).attr('class', 'btnChoose current');
@@ -55,5 +56,11 @@ $(document).ready(function () {
         $("#answer").text("Ta sẽ cho con câu trả lời....");
         setChooseOption();
         doSlot();
+    });
+    $('.title').mouseover(function(){
+        //$('.st').hide()
+    });
+    $('.title').mouseout(function(){
+       // $('.st').show( "highlight", 100)
     });
 });//End ready
