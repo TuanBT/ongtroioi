@@ -1,0 +1,191 @@
+#about{
+    position: fixed;
+    height: 20px;
+    background: black;
+    padding: 10px;
+    width: 100%;
+    color: white;
+    font-family: "Segoe UI Light";
+    bottom: 0px;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+#about:hover{
+    opacity: 1;
+}
+
+body {
+    margin: 0;
+    color: white;
+    font-family: "Segoe UI Light";
+    background-color: black;
+    background-image: url("../images/BK3.jpg");
+    background-repeat: no-repeat; /* you know... don't repeat... */
+    background-position: center center; /*center the background */
+    background-attachment: fixed; /*don't scroll with content */
+}
+
+.body {
+    /*background: aliceblue;*/
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+#RightPanel{
+    /*background: darkgreen;*/
+    width: 50%;
+    height: 100%;
+    float: right;
+}
+
+#LeftPanel {
+    /*background-color: dimgrey;*/
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+#TwoChoicePanel {
+    /*background: chartreuse;*/
+    height: 50%;
+}
+
+#MutiChoicePanel {
+    /*background: cornflowerblue;*/
+    height: 50%;
+}
+
+.choicePanel {
+    height: 100%;
+    float: left;
+    text-align: center;
+    box-sizing: border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    cursor: pointer;
+}
+
+.choicePanel.twoRows {
+    width: 50%;
+    /*background: #0065a5;*/
+}
+
+.choicePanel.twoRows:hover {
+    /*background: darkcyan;*/
+}
+
+.choicePanel.fourRows {
+    width: 25%;
+    /*background: brown;*/
+}
+
+.choicePanel.fourRows:hover {
+    /*background: burlywood;*/
+}
+
+.twoOptionFirst {
+    background: darkgreen;
+    height: 50%;
+}
+
+.twoOptionLast {
+    background: darkcyan;
+    height: 50%;
+}
+
+.twoOptionSpan {
+    line-height: 100px;
+
+    font-size: 30px;
+    /*color: white;*/
+}
+
+#rpHeader {
+    /*background: burlywood;*/
+    height: 50px;
+}
+
+#rpHeader .title {
+    width: 50%;
+    /*background: darkmagenta;*/
+    text-align: center;
+    float: left;
+}
+
+#rpHeader .title span {
+    line-height: 50px;
+    font-size: 30px;
+}
+
+#rpHeader .slogan {
+    width: 50%;
+    /*background: blue;*/
+    text-align: center;
+    float: left;
+}
+
+#rpHeader .slogan span {
+    line-height: 50px;
+    font-size: 20px;
+}
+
+#helpText {
+    text-align: center;
+    margin: 20px auto 0 0;
+    /*background: coral;*/
+    font-size: 20px;
+}
+
+#answer{
+    text-align: center;
+    font-size: 30px;
+}
+
+#funnyText{
+    margin: 20px;
+    text-align: center;
+    font-size: 20px;
+}
+
+#boxResult{
+    width: 100%;
+    height: 100%;
+    line-height: 100px;
+}
+
+#boxClick{
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+    margin: 20px auto;
+    width: 75%;
+    height: 100px;
+    font-size: 70px;
+    font-weight: 300;
+    border: solid 1px white;
+    text-align: center;
+    padding: 5px;
+}
+
+#boxClick:hover{
+    background-color: #ecf0f1;
+    border: solid 1px black;
+    color: black;
+}
+
+.choicePanel.fourRows .twoOptionFirst{
+    transition: all 0.3s ease-in;
+}
+
+.choicePanel.fourRows:hover .twoOptionFirst{
+    /*margin-top: 100%;*/
+}
+
+.choicePanel.fourRows .twoOptionLast{
+    transition: all 0.3s ease-in;
+}
+
+.choicePanel.fourRows:hover .twoOptionLast{
+    /*margin-top: -200%;*/
+}
