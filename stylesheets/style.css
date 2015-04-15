@@ -1,4 +1,4 @@
-#about{
+#about {
     position: fixed;
     height: 20px;
     line-height: 20px;
@@ -13,11 +13,11 @@
     transition: 0.5s;
 }
 
-#about:hover{
+#about:hover {
     opacity: 1;
 }
 
-#about span{
+#about span {
 }
 
 body {
@@ -38,7 +38,7 @@ body {
     height: 100%;
 }
 
-#RightPanel{
+#RightPanel {
     /*background: darkgreen;*/
     width: 40%;
     height: 100%;
@@ -47,7 +47,7 @@ body {
 
 #LeftPanel {
     /*background-color: dimgrey;*/
-    width:60%;
+    width: 60%;
     height: 100%;
     float: left;
 }
@@ -68,8 +68,8 @@ body {
     float: left;
     text-align: center;
     box-sizing: border-box;
-    -moz-box-sizing:border-box;
-    -webkit-box-sizing:border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     cursor: pointer;
 }
 
@@ -119,17 +119,16 @@ body {
     text-align: center;
     float: left;
 
-
 }
 
-#rpHeader .title .st{
+#rpHeader .title .st {
     /*display: none;*/
     /*margin-top: 20px;*/
     font-size: 5px;
     transition: all 0.3s ease-in;
 }
 
-#rpHeader .title:hover .st{
+#rpHeader .title:hover .st {
     /*display: none;*/
     /*margin-top: 20px;*/
     font-size: inherit;
@@ -160,7 +159,7 @@ body {
     height: 20%;
 }
 
-#helpText span{
+#helpText span {
 
 }
 
@@ -169,23 +168,23 @@ body {
 }
 
 #helpText:hover .callSentence {
-font-weight: bold;
+    font-weight: 700;
 }
 
-#answer{
+#answer {
     text-align: center;
     font-size: 30px;
     padding: 5px;
     height: 20%;
 }
 
-#boxResult{
+#boxResult {
     width: 100%;
     height: 100%;
     /*line-height: 100px;*/
 }
 
-#boxClick{
+#boxClick {
     transition: all 0.3s ease-in;
     cursor: pointer;
     margin: 0 auto;
@@ -198,40 +197,40 @@ font-weight: bold;
     padding: 5px;
 }
 
-#boxClick:hover{
+#boxClick:hover {
     background-color: #ecf0f1;
     border: solid 1px black;
     color: black;
 }
 
-.choicePanel.fourRows .twoOptionFirst{
+.choicePanel.fourRows .twoOptionFirst {
     transition: all 0.3s ease-in;
 }
 
-.choicePanel.fourRows:hover .twoOptionFirst{
+.choicePanel.fourRows:hover .twoOptionFirst {
     /*margin-top: 100%;*/
 }
 
-.choicePanel.fourRows .twoOptionLast{
+.choicePanel.fourRows .twoOptionLast {
     transition: all 0.3s ease-in;
 }
 
-.choicePanel.fourRows:hover .twoOptionLast{
+.choicePanel.fourRows:hover .twoOptionLast {
     /*margin-top: -200%;*/
 }
 
-.buttonOption{
+.buttonOption {
     height: 10%;
     /*margin-top: 20px;*/
 }
 
-.buttonContain{
+.buttonContain {
     float: left;
     width: 50%;
     text-align: center;
 }
 
-.btnChoose{
+.btnChoose {
     font-size: 40px;
     width: 90%;
     line-height: inherit;
@@ -245,34 +244,34 @@ font-weight: bold;
     transition: all .3s ease;
 }
 
-.btnChoose:hover{
+.btnChoose:hover {
     border-color: #fff;
     color: #fff;
     border: 1px solid #c1c2c3;
 }
 
-.btnChoose.current{
+.btnChoose.current {
     border: 1px solid #2c3e50;
-    background: #ecf0f1;
-    color: #2c3e50;
+    background: rgba(255,255,255,.5);
+    /*color: #2c3e50;*/
 
 }
 
-.btnChooseCurrent:hover{
+.btnChooseCurrent:hover {
     background-color: white;
     color: black;
 }
 
-#pl1{
-    margin-top:0px;
+#pl1 {
+    margin-top: 0px;
 }
 
-#pl2{
+#pl2 {
     margin-top: 270px;
     margin-left: 360px;
 }
 
-#pl3{
+#pl3 {
     margin-top: 300px;
     margin-left: 60px;
 }

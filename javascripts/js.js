@@ -1,5 +1,6 @@
 ﻿var options = [];
 var idChoose;
+var helpTextLine = 4; //1 blank, 2 line, 1 bonus
 
 $(document).ready(function () {
     //Chọn mặc định nút đầu tiên
@@ -14,9 +15,31 @@ window.onresize = function(event) {
 };
 
 //Reset
-function reset() {
-    $('#boxResult').css('line-height', $('#boxClick').height()+12+"px");
-    $('#boxClick').css('font-size', Math.floor($('#boxResult').height()*3/4)+"px");
+function reset(){
+        //BoxResult
+        $('#boxClick').css('line-height', $('#boxClick').height()+12+"px");
+        //$('#boxClick').css('font-size', Math.floor($('#boxResult').height()*3/4)+"px");
+        $('#boxClick').css('font-size', $('#boxResult').height()+"px");
+    //helpText
+    /*for(var i=1;i<helpTextLine*2;i++){
+        $('#boxResult').css('font-size', Math.floor($('#boxClick').height()/i));
+        if($('#boxResult').height()<=$('#boxClick').height()) break;
+    }*/
+    //helpText
+    for(var i=1;i<helpTextLine*2;i++){
+        $('#helpTextCont').css('font-size', Math.floor($('#helpText').height()/i)+"px");
+        if($('#helpTextCont').height()<=$('#helpText').height()) break;
+    }
+    //Answer
+    for(var i=1;i<helpTextLine*2;i++){
+        $('#answerContent').css('font-size', Math.floor($('#answer').height()/i)+"px");
+        if($('#answerContent').height()<=$('#answer').height()) break;
+    }
+    //$('#helpTextCont').css('font-size', Math.floor($('#helpText').height()/4));
+    /*while($('#helpTextCont').height()>=$('#helpText').height()){
+        var fz = $('#helpTextCont').css('font-size');
+        $('#helpTextCont').css('font-size',fz-=1);
+    }*/
 }
 
 //Click một nút chọn kiểu
@@ -30,11 +53,13 @@ function optClick(id) {
         $('.btnChoose').attr('class', 'btnChoose');
         $('#' + idChoose).attr('class', 'btnChoose current');
     });//End ready
+    reset();
 }
 
 //Quay số kết thúc
 function onComplete() {
-    $("#answer").text("Đó là câu trả lời của ta. Nếu con muốn ấn nữa thì cứ việc, nhưng ta chỉ trả lời thật cho một câu hỏi thôi.");
+    $("#answerContent").text("Đó là câu trả lời của ta. Nếu con muốn ấn nữa thì cứ việc, nhưng ta chỉ trả lời thật cho một câu hỏi thôi.");
+    reset();
 }
 
 //Thực hiện việc quay số
@@ -46,6 +71,12 @@ function doSlot() {
 //ChooseOption
 function setChooseOption() {
     $('#boxClick').html("<div id='boxResult'></div>");
+    if(idChoose=='T6'){
+        for (var i = 1; i <= 10; i++) {
+            $('#boxResult').append("<div>" + i + "</div>");
+        }
+        return;
+    }
     for (var i = 0; i < options.length; i++) {
         $('#boxResult').append("<div>" + options[i] + "</div>");
     }
@@ -53,7 +84,8 @@ function setChooseOption() {
 $(document).ready(function () {
     //Click box
     $('#boxClick').click(function () {
-        $("#answer").text("Ta sẽ cho con câu trả lời....");
+        $("#answerContent").text("Ta sẽ cho con câu trả lời....");
+        reset();
         setChooseOption();
         doSlot();
     });
