@@ -1,6 +1,7 @@
 ﻿var options = [];
 var idChoose;
 var helpTextLine = 4; //1 blank, 2 line, 1 bonus
+var countAsk =0;
 
 $(document).ready(function () {
     //Chọn mặc định nút đầu tiên
@@ -10,45 +11,45 @@ $(document).ready(function () {
     };
 });//End ready
 
-window.onresize = function(event) {
+window.onresize = function (event) {
     reset();
 };
 
 //Reset
-function reset(){
-        //BoxResult
-        $('#boxClick').css('line-height', $('#boxClick').height()+12+"px");
-        //$('#boxClick').css('font-size', Math.floor($('#boxResult').height()*3/4)+"px");
-        $('#boxClick').css('font-size', $('#boxResult').height()+"px");
+function reset() {
+    //BoxResult
+    $('#boxClick').css('line-height', $('#boxClick').height() + 12 + "px");
+    //$('#boxClick').css('font-size', Math.floor($('#boxResult').height()*3/4)+"px");
+    $('#boxClick').css('font-size', $('#boxResult').height() + "px");
     //helpText
     /*for(var i=1;i<helpTextLine*2;i++){
-        $('#boxResult').css('font-size', Math.floor($('#boxClick').height()/i));
-        if($('#boxResult').height()<=$('#boxClick').height()) break;
-    }*/
+     $('#boxResult').css('font-size', Math.floor($('#boxClick').height()/i));
+     if($('#boxResult').height()<=$('#boxClick').height()) break;
+     }*/
     //helpText
-    for(var i=1;i<helpTextLine*2;i++){
-        $('#helpTextCont').css('font-size', Math.floor($('#helpText').height()/i)+"px");
-        if($('#helpTextCont').height()<=$('#helpText').height()) break;
+    for (var i = 1; i < helpTextLine * 2; i++) {
+        $('#helpTextCont').css('font-size', Math.floor($('#helpText').height() / i) + "px");
+        if ($('#helpTextCont').height() <= $('#helpText').height()) break;
     }
     //Answer
-    for(var i=1;i<helpTextLine*2;i++){
-        $('#answerContent').css('font-size', Math.floor($('#answer').height()/i)+"px");
-        if($('#answerContent').height()<=$('#answer').height()) break;
+    for (var i = 1; i < helpTextLine * 2; i++) {
+        $('#answerContent').css('font-size', Math.floor($('#answer').height() / i) + "px");
+        if ($('#answerContent').height() <= $('#answer').height()) break;
     }
     //$('#helpTextCont').css('font-size', Math.floor($('#helpText').height()/4));
     /*while($('#helpTextCont').height()>=$('#helpText').height()){
-        var fz = $('#helpTextCont').css('font-size');
-        $('#helpTextCont').css('font-size',fz-=1);
-    }*/
+     var fz = $('#helpTextCont').css('font-size');
+     $('#helpTextCont').css('font-size',fz-=1);
+     }*/
 }
 
 //Click một nút chọn kiểu
 function optClick(id) {
     options = document.getElementById(id).innerText.trim().split('-');
     idChoose = id;
-    var lh = $('#boxClick').height()+12;
+    var lh = $('#boxClick').height() + 12;
     //$('#boxClick').html("<div id='boxResult' style='line-height:"+lh+"px'>" + options[0] + "-" + options[1] + "</div>");
-    $('#boxClick').html("<div id='boxResult' style='line-height:"+lh+"px'>HỎI</div>");
+    $('#boxClick').html("<div id='boxResult' style='line-height:" + lh + "px'>HỎI</div>");
     $(document).ready(function () {
         $('.btnChoose').attr('class', 'btnChoose');
         $('#' + idChoose).attr('class', 'btnChoose current');
@@ -58,7 +59,9 @@ function optClick(id) {
 
 //Quay số kết thúc
 function onComplete() {
-    $("#answerContent").text("Đó là câu trả lời của ta. Nếu con muốn ấn nữa thì cứ việc, nhưng ta chỉ trả lời thật cho một câu hỏi thôi.");
+    // $("#answerContent").text("Đó là câu trả lời của ta. Nếu con muốn ấn nữa thì cứ việc, nhưng ta chỉ trả lời thật cho một câu hỏi thôi.");
+    $("#answerContent").text(setFunnyText(countAsk));
+    console.log(countAsk);
     reset();
 }
 
@@ -66,21 +69,67 @@ function onComplete() {
 function doSlot() {
     $("#boxResult").slotMachine({delay: 450})
         .shuffle(10, onComplete);
+    countAsk++;
 }
 
 //ChooseOption
 function setChooseOption() {
     $('#boxClick').html("<div id='boxResult'></div>");
-    if(idChoose=='T6'){
+
+    //Chọn số random
+    if (idChoose == 'T6') {
         for (var i = 1; i <= 10; i++) {
             $('#boxResult').append("<div>" + i + "</div>");
         }
         return;
     }
+    //Chọn các trường hợp chữ khác
     for (var i = 0; i < options.length; i++) {
         $('#boxResult').append("<div>" + options[i] + "</div>");
     }
 }
+
+//Ngẫu nhiên funny text
+function setFunnyText(intTypeText) {
+    var arrDb = [];
+    switch (intTypeText) {
+        case 0:
+            arrDb = db.FunnyTest.Normal;
+            break;
+        case 1:
+            arrDb = db.FunnyTest.OneTimes;
+            break;
+        case 2:
+            arrDb = db.FunnyTest.SecondTimes;
+            break;
+        case 3:
+            arrDb = db.FunnyTest.ThirdTimes;
+            break;
+        default:
+            arrDb = db.FunnyTest.OverTimes;
+            break;
+    }
+    var length = arrDb.length;
+    var ranIndex = Math.floor((Math.random() * length) + 0);
+    return arrDb[ranIndex].Text;
+}
+
+function setLocalStorage(key, value) {
+    if (typeof(Storage) !== "undefined") {
+        localStorage.setItem(key, value);
+    } else {
+        console.log("Browser not support local storage");
+    }
+}
+
+function setLocalStorage(key, value) {
+    if (typeof(Storage) !== "undefined") {
+        localStorage.getItem(key, value);
+    } else {
+        console.log("Browser not support local storage");
+    }
+}
+
 $(document).ready(function () {
     //Click box
     $('#boxClick').click(function () {
@@ -89,10 +138,10 @@ $(document).ready(function () {
         setChooseOption();
         doSlot();
     });
-    $('.title').mouseover(function(){
+    $('.title').mouseover(function () {
         //$('.st').hide()
     });
-    $('.title').mouseout(function(){
-       // $('.st').show( "highlight", 100)
+    $('.title').mouseout(function () {
+        // $('.st').show( "highlight", 100)
     });
 });//End ready

@@ -25,14 +25,15 @@ body {
     color: white;
     font-family: "Segoe UI Light";
     background-color: black;
-    background-image: url("../images/BK3.jpg");
-    background-repeat: no-repeat; /* you know... don't repeat... */
-    background-position: center center; /*center the background */
-    background-attachment: fixed; /*don't scroll with content */
+    background: url("../images/BK3.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .body {
-    /*background: aliceblue;*/
+    /*background: rgba(0, 0, 0, 0.5);*/
     position: fixed;
     width: 100%;
     height: 100%;
@@ -156,7 +157,7 @@ body {
     /*margin: 20px auto 0 0;*/
     /*background: coral;*/
     font-size: 20px;
-    height: 20%;
+    height: 10%;
 }
 
 #helpText span {
@@ -188,7 +189,7 @@ body {
     transition: all 0.3s ease-in;
     cursor: pointer;
     margin: 0 auto;
-    width: 75%;
+    width: 90%;
     height: 20%;
     font-size: 70px;
     font-weight: 300;
@@ -198,9 +199,9 @@ body {
 }
 
 #boxClick:hover {
-    background-color: #ecf0f1;
+    background-color: rgba(236, 240, 241, 0.2);
     border: solid 1px black;
-    color: black;
+    /*color: black;*/
 }
 
 .choicePanel.fourRows .twoOptionFirst {
