@@ -11,9 +11,7 @@ db =
         ]
         ,
         "OneTimes": [
-            {"Text": "?ây là câu dài, mang ý ngh?a ông tr?i ?ang nóng n?y, hãy h?i l? r?i bi?n ?i mà th?c hi?n ? ?ó mà suy ngh? ??n ?o."},
-            {"Text": "OneTimes1"},
-            {"Text": "OneTimes2"}
+            {"Text": "?ây là câu dài, mang ý ngh?a ông tr?i ?ang nóng n?y, hãy h?i l? r?i bi?n ?i mà th?c hi?n ? ?ó mà suy ngh? ??n ?o."}
         ]
         , "SecondTimes": [
             {"Text": "SecondTimes1"},
