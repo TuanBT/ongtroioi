@@ -11,7 +11,7 @@ db =
         ]
         ,
         "OneTimes": [
-            {"Text": "?�y l� c�u d�i, mang � ngh?a �ng tr?i ?ang n�ng n?y, h�y h?i l? r?i bi?n ?i m� th?c hi?n ? ?� m� suy ngh? ??n ?o."}
+            {"Text": "Đây là câu dài, mang ý nghĩa ông trời đang nóng nảy, hãy hỏi lẹ rồi biến đi mà thực hiện ở đó mà suy nghĩ đắn đo."}
         ]
         , "SecondTimes": [
             {"Text": "SecondTimes1"},
