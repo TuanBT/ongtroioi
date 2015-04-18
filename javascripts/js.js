@@ -77,7 +77,7 @@ function setChooseOption() {
     $('#boxClick').html("<div id='boxResult'></div>");
 
     //Chọn số random
-    if (idChoose == 'T6') {
+    if (idChoose == 'T5') {
         for (var i = 1; i <= 10; i++) {
             $('#boxResult').append("<div>" + i + "</div>");
         }

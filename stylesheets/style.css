@@ -253,7 +253,7 @@ body {
 
 .btnChoose.current {
     border: 1px solid #2c3e50;
-    background: rgba(255,255,255,.5);
+    background: rgba(255, 255, 255, .5);
     /*color: #2c3e50;*/
 
 }
@@ -265,6 +265,7 @@ body {
 
 #pl1 {
     margin-top: 0px;
+    margin-left: -111px;
 }
 
 #pl2 {
@@ -274,5 +275,66 @@ body {
 
 #pl3 {
     margin-top: 300px;
-    margin-left: 60px;
+    margin-left: 15px;
+}
+
+#popUp {
+    background-color: black;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 20%; /* adjust as per your needs */
+    height: 20%; /* adjust as per your needs */
+    z-index: 1;
+    display: none;
+}
+
+.textBoxLeft {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #848484;
+    outline: 0;
+    height: 24.5px;
+    width: 80%;
+    padding-left: 10px;
+    /*float:left;*/
+    margin-left: 10%;
+    font-size: 24.5px;
+}
+
+.textBoxRight {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #848484;
+    outline: 0;
+    height: 24.5px;
+    width: 80%;
+    padding-left: 10px;
+    /*float:left;*/
+    margin-left: 10%;
+    font-size: 24.5px;
+}
+
+#editButtonLeft {
+    width: 50%;
+    float: left;
+}
+
+#editButtonRight {
+    width: 45%;
+    margin-right: 5%;
+    float: right;
+    cursor: pointer;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    border: 1px dashed #c1c2c3;
+}
+
+#editButtonRight:hover {
+    border: 1px solid #FFFFFF;
 }

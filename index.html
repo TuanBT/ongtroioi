@@ -12,10 +12,13 @@
 </head>
 <body>
 <div class="body">
-    <div id="LeftPanel">
+    <div id="popUp">
 
+    </div>
+    <div id="LeftPanel">
         <div id="helpText">
-            <span id="helpTextCont">Con hãy nói ba lần <span class="callSentence">"ÔNG TRỜI ƠI, HÃY GIÚP CON"</span>.</br>
+            <span id="helpTextCont">Con hãy nói ba lần <span
+                    class="callSentence">"ÔNG TRỜI ƠI, HÃY GIÚP CON"</span>.</br>
                 Ta sẽ nghe thấy và cho con lời khuyên thông thái nhất.</span>
         </div>
         <div id="boxClick">
@@ -29,24 +32,33 @@
         <div class="buttonOption">
             <div class="buttonContain">
                 <div id="T1" onclick="optClick('T1')" class="btnChoose">
-                    CÓ-KHÔNG
+                    XẤP-NGỬA
                 </div>
             </div>
             <div class="buttonContain">
                 <div id="T2" onclick="optClick('T2')" class="btnChoose">
-                    ĐÚNG-SAI
+                    CÓ-KHÔNG
                 </div>
             </div>
         </div>
         <div class="buttonOption">
             <div class="buttonContain">
                 <div id="T5" onclick="optClick('T5')" class="btnChoose">
-                    A-Z
+                    1-10
                 </div>
             </div>
             <div class="buttonContain">
-                <div id="T6" onclick="optClick('T6')" class="btnChoose">
-                    1-10
+                <!-- <div id="T6" onclick="optClick('T6')" class="btnChoose">
+                     .-.
+                 </div>-->
+                <div id="editContain">
+                    <div id="editButtonLeft">
+                        <input class="textBoxLeft" type="text">
+                        <input class="textBoxRight" type="text">
+                    </div>
+                    <div id="editButtonRight" onclick="">
+                        <img src="images/save.svg" style="width: 100%;height: 52px;">
+                    </div>
                 </div>
             </div>
         </div>
@@ -71,7 +83,7 @@
                 <span>Muốn biết sự đời, hãy hỏi ông trời</span>
             </div>-->
         </div>
-        <div id="container" class="container" style="margin-left: -120px">
+        <div id="container" class="container">
             <ul id="scene" class="scene">
                 <li id="pl1" class="layer" data-depth="0.30"><img src="images/sun.svg"></li>
                 <li id="pl2" class="layer" data-depth="1.00"><img src="images/cloud.svg" height="200px"></li>
