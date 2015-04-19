@@ -2,12 +2,22 @@
 var idChoose;
 var helpTextLine = 4; //1 blank, 2 line, 1 bonus
 var countAsk =0;
+var customOptionValue = ""; //customOptionKey
+var aswerDef = "Hãy trả lời ta, con đang gặp vấn đề gì?";
 
 $(document).ready(function () {
     //Chọn mặc định nút đầu tiên
     window.onload = function () {
         reset();
         optClick('T1');
+		if(getLocalStorage('customOptionKey')!=null){
+			customOptionValue = getLocalStorage('customOptionKey');
+			document.getElementById('textBoxFirst').value = customOptionValue.split('-')[0];
+			document.getElementById('textBoxSecond').value = customOptionValue.split('-')[1];
+		}else{
+			document.getElementById('textBoxFirst').value = "XẤP";
+			document.getElementById('textBoxSecond').value = "NGỬA";
+		}
     };
 });//End ready
 
@@ -50,11 +60,20 @@ function optClick(id) {
     var lh = $('#boxClick').height() + 12;
     //$('#boxClick').html("<div id='boxResult' style='line-height:"+lh+"px'>" + options[0] + "-" + options[1] + "</div>");
     $('#boxClick').html("<div id='boxResult' style='line-height:" + lh + "px'>HỎI</div>");
-    $(document).ready(function () {
         $('.btnChoose').attr('class', 'btnChoose');
         $('#' + idChoose).attr('class', 'btnChoose current');
-    });//End ready
+		$('#answerContent').html(aswerDef);
     reset();
+}
+
+//Click edit option
+function saveChoose() {
+    var firstText = document.getElementById('textBoxFirst').value;
+    var secondText = document.getElementById('textBoxSecond').value;
+    document.getElementById('T6').innerHTML = firstText + "-" + secondText;
+    $('#editContain').hide();
+    $('#T6').show();
+	setLocalStorage("customOptionKey",firstText + "-" + secondText);
 }
 
 //Quay số kết thúc
@@ -122,9 +141,9 @@ function setLocalStorage(key, value) {
     }
 }
 
-function setLocalStorage(key, value) {
+function getLocalStorage(key, value) {
     if (typeof(Storage) !== "undefined") {
-        localStorage.getItem(key, value);
+        return localStorage.getItem(key, value);
     } else {
         console.log("Browser not support local storage");
     }

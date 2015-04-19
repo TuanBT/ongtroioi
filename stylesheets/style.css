@@ -1,9 +1,7 @@
 #about {
     position: fixed;
-    height: 20px;
-    line-height: 20px;
-    background: black;
-    padding: 10px;
+    height: 5%;
+    background: rgba(0, 0, 0, 0.5);
     width: 100%;
     text-align: center;
     color: #ecf0f1;
@@ -243,6 +241,7 @@ body {
     /*padding: 0 30px 4px 15px;*/
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
+    margin: 0 auto;
 }
 
 .btnChoose:hover {
@@ -265,7 +264,7 @@ body {
 
 #pl1 {
     margin-top: 0px;
-    margin-left: -111px;
+    margin-left: -40px;
 }
 
 #pl2 {
@@ -289,32 +288,36 @@ body {
     display: none;
 }
 
-.textBoxLeft {
+#textBoxFirst {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
     border: 1px solid #848484;
     outline: 0;
-    height: 24.5px;
+    height: 25.5px;
     width: 80%;
     padding-left: 10px;
     /*float:left;*/
     margin-left: 10%;
     font-size: 24.5px;
+	color: #ecf0f1;
+  background-color: rgba(255, 255, 255, 0);
 }
 
-.textBoxRight {
+#textBoxSecond {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
     border: 1px solid #848484;
     outline: 0;
-    height: 24.5px;
+    height: 25.5px;
     width: 80%;
     padding-left: 10px;
     /*float:left;*/
     margin-left: 10%;
     font-size: 24.5px;
+	color: #ecf0f1;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 #editButtonLeft {
@@ -337,4 +340,10 @@ body {
 
 #editButtonRight:hover {
     border: 1px solid #FFFFFF;
+}
+
+#editIcon{
+width:5%;
+height:52px;
+background-color:#123411
 }
