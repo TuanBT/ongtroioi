@@ -15,7 +15,7 @@ $(document).ready(function () {
 			document.getElementById('textBoxFirst').value = customOptionValue.split('-')[0];
 			document.getElementById('textBoxSecond').value = customOptionValue.split('-')[1];
 		}else{
-			document.getElementById('textBoxFirst').value = "XẤP";
+			document.getElementById('textBoxFirst').value = "SẤP";
 			document.getElementById('textBoxSecond').value = "NGỬA";
 		}
     };
