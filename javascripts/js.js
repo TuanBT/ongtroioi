@@ -86,7 +86,7 @@ function onComplete() {
 //Thực hiện việc quay số
 function doSlot() {
     $("#boxResult").slotMachine({delay: 450})
-        .shuffle(10, onComplete);
+        .shuffle(20, onComplete);
     countAsk++;
 }
 
@@ -111,6 +111,9 @@ function setChooseOption() {
 function setFunnyText(intTypeText) {
     var arrDb = [];
     switch (intTypeText) {
+		case -1:
+            arrDb = db.FunnyTest.Waiting;
+            break;
         case 0:
             arrDb = db.FunnyTest.Normal;
             break;
@@ -126,6 +129,7 @@ function setFunnyText(intTypeText) {
         default:
             arrDb = db.FunnyTest.OverTimes;
             break;
+		
     }
     var length = arrDb.length;
     var ranIndex = Math.floor((Math.random() * length) + 0);
@@ -151,7 +155,7 @@ function getLocalStorage(key, value) {
 $(document).ready(function () {
     //Click box
     $('#boxClick').click(function () {
-        $("#answerContent").text("Ta sẽ cho con câu trả lời....");
+        $("#answerContent").text(setFunnyText(-1));
         reset();
         setChooseOption();
         doSlot();
