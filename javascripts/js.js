@@ -3,7 +3,6 @@ var idChoose;
 var helpTextLine = 4; //1 blank, 2 line, 1 bonus
 var countAsk =0;
 var customOptionValue = ""; //customOptionKey
-var aswerDef = "Hãy trả lời ta, con đang gặp vấn đề gì?";
 
 $(document).ready(function () {
     //Chọn mặc định nút đầu tiên
@@ -62,7 +61,7 @@ function optClick(id) {
     $('#boxClick').html("<div id='boxResult' style='line-height:" + lh + "px'>HỎI</div>");
         $('.btnChoose').attr('class', 'btnChoose');
         $('#' + idChoose).attr('class', 'btnChoose current');
-		$('#answerContent').html(aswerDef);
+		$('#answerContent').html(setFunnyText(0));
     reset();
 }
 
