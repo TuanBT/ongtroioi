@@ -1,3 +1,12 @@
+@media all and (max-width: 500px) {
+   #LeftPanel {
+    width: 100%!important;
+}
+#RightPanel {
+	display:none;
+}
+}
+
 #about {
     position: fixed;
     height: 5%;
@@ -43,6 +52,8 @@ body {
     height: 100%;
     float: right;
 }
+
+
 
 #LeftPanel {
     /*background-color: dimgrey;*/
