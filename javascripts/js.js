@@ -54,7 +54,7 @@ function reset() {
 
 //Click một nút chọn kiểu
 function optClick(id) {
-    options = document.getElementById(id).innerText.trim().split('-');
+    options = $('#'+id).text().trim().split('-');
     idChoose = id;
     var lh = $('#boxClick').height() + 12;
     //$('#boxClick').html("<div id='boxResult' style='line-height:"+lh+"px'>" + options[0] + "-" + options[1] + "</div>");
