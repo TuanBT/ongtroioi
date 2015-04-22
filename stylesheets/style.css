@@ -1,9 +1,19 @@
-#about{
+@media all and (max-width: 500px) {
+   #LeftPanel {
+    width: 100%!important;
+}
+#RightPanel {
+	display:none!important;
+}
+.btnChoose{
+  font-size: 30px!important;
+}
+}
+
+#about {
     position: fixed;
-    height: 20px;
-    line-height: 20px;
-    background: black;
-    padding: 10px;
+    height: 5%;
+    background: rgba(0, 0, 0, 0.5);
     width: 100%;
     text-align: center;
     color: #ecf0f1;
@@ -13,11 +23,11 @@
     transition: 0.5s;
 }
 
-#about:hover{
+#about:hover {
     opacity: 1;
 }
 
-#about span{
+#about span {
 }
 
 body {
@@ -25,29 +35,32 @@ body {
     color: white;
     font-family: "Segoe UI Light";
     background-color: black;
-    background-image: url("../images/BK3.jpg");
-    background-repeat: no-repeat; /* you know... don't repeat... */
-    background-position: center center; /*center the background */
-    background-attachment: fixed; /*don't scroll with content */
+    background: url("../images/BK1.svg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .body {
-    /*background: aliceblue;*/
+    background: rgba(0, 0, 0, 0.5);
     position: fixed;
     width: 100%;
     height: 100%;
 }
 
-#RightPanel{
+#RightPanel {
     /*background: darkgreen;*/
     width: 40%;
     height: 100%;
     float: right;
 }
 
+
+
 #LeftPanel {
     /*background-color: dimgrey;*/
-    width:60%;
+    width: 60%;
     height: 100%;
     float: left;
 }
@@ -68,8 +81,8 @@ body {
     float: left;
     text-align: center;
     box-sizing: border-box;
-    -moz-box-sizing:border-box;
-    -webkit-box-sizing:border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     cursor: pointer;
 }
 
@@ -119,17 +132,16 @@ body {
     text-align: center;
     float: left;
 
-
 }
 
-#rpHeader .title .st{
+#rpHeader .title .st {
     /*display: none;*/
     /*margin-top: 20px;*/
     font-size: 5px;
     transition: all 0.3s ease-in;
 }
 
-#rpHeader .title:hover .st{
+#rpHeader .title:hover .st {
     /*display: none;*/
     /*margin-top: 20px;*/
     font-size: inherit;
@@ -157,10 +169,10 @@ body {
     /*margin: 20px auto 0 0;*/
     /*background: coral;*/
     font-size: 20px;
-    height: 20%;
+    height: 10%;
 }
 
-#helpText span{
+#helpText span {
 
 }
 
@@ -169,27 +181,27 @@ body {
 }
 
 #helpText:hover .callSentence {
-font-weight: bold;
+    font-weight: 700;
 }
 
-#answer{
+#answer {
     text-align: center;
     font-size: 30px;
     padding: 5px;
     height: 20%;
 }
 
-#boxResult{
+#boxResult {
     width: 100%;
     height: 100%;
     /*line-height: 100px;*/
 }
 
-#boxClick{
+#boxClick {
     transition: all 0.3s ease-in;
     cursor: pointer;
     margin: 0 auto;
-    width: 75%;
+    width: 90%;
     height: 20%;
     font-size: 70px;
     font-weight: 300;
@@ -198,40 +210,40 @@ font-weight: bold;
     padding: 5px;
 }
 
-#boxClick:hover{
-    background-color: #ecf0f1;
+#boxClick:hover {
+    background-color: rgba(236, 240, 241, 0.2);
     border: solid 1px black;
-    color: black;
+    /*color: black;*/
 }
 
-.choicePanel.fourRows .twoOptionFirst{
+.choicePanel.fourRows .twoOptionFirst {
     transition: all 0.3s ease-in;
 }
 
-.choicePanel.fourRows:hover .twoOptionFirst{
+.choicePanel.fourRows:hover .twoOptionFirst {
     /*margin-top: 100%;*/
 }
 
-.choicePanel.fourRows .twoOptionLast{
+.choicePanel.fourRows .twoOptionLast {
     transition: all 0.3s ease-in;
 }
 
-.choicePanel.fourRows:hover .twoOptionLast{
+.choicePanel.fourRows:hover .twoOptionLast {
     /*margin-top: -200%;*/
 }
 
-#buttonOption{
+.buttonOption {
     height: 10%;
     /*margin-top: 20px;*/
 }
 
-.buttonContain{
+.buttonContain {
     float: left;
     width: 50%;
     text-align: center;
 }
 
-.btnChoose{
+.btnChoose {
     font-size: 40px;
     width: 90%;
     line-height: inherit;
@@ -243,36 +255,109 @@ font-weight: bold;
     /*padding: 0 30px 4px 15px;*/
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
+    margin: 0 auto;
 }
 
-.btnChoose:hover{
+.btnChoose:hover {
     border-color: #fff;
     color: #fff;
     border: 1px solid #c1c2c3;
 }
 
-.btnChoose.current{
+.btnChoose.current {
     border: 1px solid #2c3e50;
-    background: #ecf0f1;
-    color: #2c3e50;
+    background: rgba(255, 255, 255, .5);
+    /*color: #2c3e50;*/
 
 }
 
-.btnChooseCurrent:hover{
+.btnChooseCurrent:hover {
     background-color: white;
     color: black;
 }
 
-#pl1{
-    margin-top:0px;
+#pl1 {
+    margin-top: 0px;
+    margin-left: -40px;
 }
 
-#pl2{
+#pl2 {
     margin-top: 270px;
     margin-left: 360px;
 }
 
-#pl3{
+#pl3 {
     margin-top: 300px;
-    margin-left: 60px;
+    margin-left: 15px;
+}
+
+#popUp {
+    background-color: black;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 20%; /* adjust as per your needs */
+    height: 20%; /* adjust as per your needs */
+    z-index: 1;
+    display: none;
+}
+
+#textBoxFirst {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #848484;
+    outline: 0;
+    height: 25.5px;
+    width: 80%;
+    padding-left: 10px;
+    /*float:left;*/
+    margin-left: 10%;
+    font-size: 24.5px;
+	color: #ecf0f1;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+#textBoxSecond {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #848484;
+    outline: 0;
+    height: 25.5px;
+    width: 80%;
+    padding-left: 10px;
+    /*float:left;*/
+    margin-left: 10%;
+    font-size: 24.5px;
+	color: #ecf0f1;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+#editButtonLeft {
+    width: 50%;
+    float: left;
+}
+
+#editButtonRight {
+    width: 45%;
+    margin-right: 5%;
+    float: right;
+    cursor: pointer;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    border: 1px dashed #c1c2c3;
+}
+
+#editButtonRight:hover {
+    border: 1px solid #FFFFFF;
+}
+
+#editIcon{
+width:5%;
+height:52px;
+background-color:#123411
 }
