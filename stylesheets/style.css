@@ -3,7 +3,10 @@
     width: 100%!important;
 }
 #RightPanel {
-	display:none;
+	display:none!important;
+}
+.btnChoose{
+  font-size: 30px!important;
 }
 }
 
