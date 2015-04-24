@@ -6,12 +6,14 @@ db =
     "FunnyTest": {
 		"Waiting": [
             {"Text": "Là một ông trời có tâm, câu trả lời của ta đòi hỏi vài giây suy nghĩ...."},
-			{"Text": "Để ta bấm đốt ngón tay tính toán cho ra câu trả lời..."}
+			{"Text": "Để ta bấm đốt ngón tay tính toán cho ra câu trả lời..."},
+			{"Text": "Nên trả lòi điều gì cho con đây nhỉ..."}
         ]
         ,
         "Normal": [
             {"Text": "Hãy trả lời ta, con đang gặp vấn đề gì?"},
-			{"Text": "Cho ta biết con muốn gì nào?"}
+			{"Text": "Cho ta biết con muốn gì nào?"},
+			{"Text": "Muốn ta giúp đỡ?, cú tự nhiên nào!"}
         ]
         ,
         "OneTimes": [
@@ -25,11 +27,15 @@ db =
             {"Text": "Đừng bối rối nữa anh bạn nhỏ. Cứ hành động theo trái tim đi nào. Mong rằng câu trả lời phía trên phần nào củng cố quyết định thật sự trong lòng con."}
         ]
         , "ThirdTimes": [
-            {"Text": "Nếu đã hỏi một câu đến lần này thì hẳn trong lòng con đã có sẵn quyết định, có hỏi ta 100 lần nữa thì câu trả lời của bản thân con vẫn là số 1. Hãy làm theo theo trực giác và trái tim con mách bảo. Thôi ta đi đâyyyyyyy! (Nếu hỏi câu khác thì nhớ F5 rồi đọc ba lần cầu thần chú '...' ta sẽ lại hiện lên). Nhưng nếu vẫn câu hỏi cũ thì ... chúc vui!"}
+            {"Text": "Nếu đã hỏi một câu đến lần này thì hẳn trong lòng con đã có sẵn quyết định, có hỏi ta 100 lần nữa thì câu trả lời của bản thân con vẫn là số 1. Hãy làm theo theo trực giác và trái tim con mách bảo. Thôi ta đi đâyyyyyyy! (Nếu hỏi câu khác thì nhớ F5 rồi đọc ba lần cầu thần chú '...' ta sẽ lại hiện lên). Nhưng nếu vẫn câu hỏi cũ thì ... chúc vui!"},
+			{"Text": "Đã là lần ấn thú ba rồi, không lẽ con đang mong đợi điều gì khác nữa?"},
+			{"Text": "Quá tam ba bận, trả lời cho lần này là lần cuối nha!"}
         ]
         ,
         "OverTimes": [
-            {"Text": "Vẫn cứng đầu hả? Thôi, ta trả lời đại đấy, đúng sai không biết đâu nha."}
+            {"Text": "Vẫn cứng đầu hả? Thôi, ta trả lời đại đấy, đúng sai không biết đâu nha."},
+			{"Text": "Đúng hay sai ta không biết đâu nha!"},
+			{"Text": "Hỏi gì mà hỏi lắm thế không biết, ta trả lòi như thế đó, tin hay không tùy con."}
         ]
     }
 }
