@@ -13,7 +13,7 @@ db =
         "Normal": [
             {"Text": "Hãy trả lời ta, con đang gặp vấn đề gì?"},
 			{"Text": "Cho ta biết con muốn gì nào?"},
-			{"Text": "Muốn ta giúp đỡ?, cú tự nhiên nào!"}
+			{"Text": "Muốn ta giúp đỡ?, cứ tự nhiên nào!"}
         ]
         ,
         "OneTimes": [
